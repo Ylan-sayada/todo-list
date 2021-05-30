@@ -1,0 +1,38 @@
+import React,{useReducer} from 'react'
+import TodoInput from './TodoInput';
+import TodoContent from './TodoContent';
+
+function reducer(state, action) {
+    switch (action.type) {
+      case 'add':
+        return [...state,{
+            id:state.length,
+            taskName: action.payload,
+            isAccomplished: false
+        }];
+      case 'delete':
+          state = state.filter(task => action.payload !== task.id).map(el => el)
+         return [...state];
+      default:
+        throw new Error();
+    }
+  }
+
+  let initReducer = [];
+
+export default function TodoContainer() {
+    let [tasks,dispatchTask] = useReducer(reducer,initReducer);
+    let addItem = (task) =>{
+         dispatchTask({type:'add',payload:task})
+    }
+    let deleteItem = (id) =>{
+        dispatchTask({type:'delete',payload:id})
+   }
+    console.log(tasks);
+    return (
+        <div>
+       <TodoInput onClickHandler={addItem}/>
+       <TodoContent del={deleteItem} taskList={tasks}/>
+        </div>
+    )
+}
