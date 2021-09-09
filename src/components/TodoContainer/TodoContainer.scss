@@ -1,0 +1,63 @@
+.todo-container {
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: 0.3s ease color;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    .count-task-section {
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        justify-content: center;
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .svgIcon {
+
+            width: 20%;
+            max-width: 160px;
+
+            * {
+                fill: grey;
+            }
+        }
+    }
+
+
+
+    .todo-header {
+        padding: 10px 0;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 0 5px 0;
+        }
+
+        h6,
+        h6 a {
+            font-size: 0.9rem;
+            font-style: italic;
+            padding: 5px 0;
+
+        }
+
+        h1,
+        h6 {
+            margin: 0;
+        }
+
+        text-align: center;
+        background-color: #1976D2;
+        color: #FFFFFF;
+    }
+}

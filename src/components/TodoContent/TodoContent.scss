@@ -1,0 +1,14 @@
+.todo-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 742px) {
+    .todo-content {
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+}

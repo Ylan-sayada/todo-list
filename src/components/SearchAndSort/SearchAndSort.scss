@@ -1,0 +1,33 @@
+.search-and-sort {
+    background-color: #ebf0f1;
+
+
+    .sort-div,
+    .search-div {
+        max-width: 430px;
+        padding: 10px 0;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        width: 80%;
+
+    }
+
+    .search-div input {
+        max-height: 34px;
+    }
+
+    label {
+        color: #757575;
+        font-size: 0.8em;
+    }
+
+}
+
+@media (min-width:886px) {
+    .container {
+        display: flex;
+        padding: 20px;
+    }
+
+}
